@@ -46,7 +46,8 @@ export default {
       margin: 0 10px;
       color: $subtitle;
       &:hover {
-            color: $main;
+         color: $main;
+         cursor: pointer;
       }      
    }
 }

@@ -15,9 +15,9 @@
                      :class="{active : (index === counter)}"
                      @click="counter = index"
                   >
-                     <a href="#"> {{item.text}} </a>
+                     <a href="#"> {{item.text}} 
                      <!-- <i :class="item.text"></i> -->
-                     <i :class="item.icon.join(' ')"></i>
+                     <i :class="item.icon.join(' ')"></i></a>
                   </li>
                </ul>   
             </div>
@@ -96,18 +96,6 @@ export default {
       p{
          font-size: 20px;
       }
-      .gs-solid-btn{
-         color: $main;
-         background-color: $main-btn;
-         margin-right: 10px;
-      }
-      // .gs-btn {
-      //    color: $main;
-      //    border: 1px solid $main-btn;
-      //    &:hover {
-      //       background-color: $main-btn;
-      //    }
-      // }
    }  
 }
 

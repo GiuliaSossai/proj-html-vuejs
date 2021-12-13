@@ -3,7 +3,7 @@
 @import '~@fontsource/league-spartan/800.css';
 @import '~@fontsource/league-spartan/700.css';
 
-
+// generals
 body {
    font-family: $main-font;
    height: 100%;
@@ -21,25 +21,10 @@ ul li {
 
 a {
    text-decoration: none;
-   cursor: pointer;
 }
 
 img {
    width: 100%;
-}
-
-button {
-   text-transform: uppercase;
-   padding: 3px 20px;
-}
-
-.gs-btn {
-   color: $main;
-   border: 1px solid $main-btn;
-   &:hover {
-      color: $main;
-      background-color: $main-btn;
-   }
 }
 
 section {
@@ -56,6 +41,31 @@ h2 {
 
 h4, h5 {
    font-weight: 700;
+}
+
+
+// utilities
+button {
+   text-transform: uppercase;
+   padding: 3px 20px;
+}
+
+.gs-btn {
+   color: $main;
+   border: 1px solid $main-btn;
+   &:hover {
+      color: $main;
+      background-color: $main-btn;
+   }
+}
+
+.gs-solid-btn{
+   color: $main;
+   background-color: $main-btn;
+   margin-right: 10px;
+   &:hover {
+      color: $main;
+   }
 }
 
 .subs {
