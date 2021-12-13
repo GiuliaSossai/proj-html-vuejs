@@ -8,16 +8,15 @@
             </div>
 
             <ul class="d-flex">
-               <!-- <li><a href="#"> <i class="fas fa-phone"></i> +1 (035) 1234-5678 </a></li>
-               <li><a href="#"> <i class="fas fa-envelope"></i> hello@example.com </a></li>
-               <li><a href="#"> <i class="fab fa-facebook-f"></i> </a></li>
-               <li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
-               <li><a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>   -->
+               <!-- ciclo for per stampare la lista -->
                <li 
                   v-for="(contact, index) in ContactsHeader"
-                  :key="index"
+                  :key="index"   
                >
-               <a href="#"> {{contact.text}} </a>   
+               <a href="#">
+                  <i :class="contact.icon.join(' ')"></i>
+                  {{contact.text}} 
+               </a>   
                </li>
             </ul>
          </div>
@@ -31,21 +30,25 @@
                </div>
                
                <ul class="menu d-flex">
-                  <!-- <li><a href="#"> home </a></li>
-                  <li><a href="#"> about </a></li>
-                  <li><a href="#"> services </a></li>
-                  <li><a href="#"> team </a></li>
-                  <li><a href="#"> blog </a></li>
-                  <li><a href="#"> <i class="far fa-user"></i>  </a></li>   
-                  <li><a href="#" class="fake-btn"> get in touch  </a></li>    -->
+                  <!-- ciclo for per stampare la lista -->
+                  <!-- se la voce del menu è attiva, assume la classe active -->
                   <li
-                  v-for="(item, index) in MenuHeader"
-                  :key="index">
+                     v-for="(item, index) in MenuHeader"
+                     :key="index"
+                     :class="{active : (index === counter)}"
+                     @click="counter = index"
+                  >
                      <a href="#"> {{item.text}} </a>
+                     <i :class="item.icon.join(' ')"></i>
                   </li>
-               </ul>
-               
+               </ul>   
             </div>
+
+            <h1 class="text-center">Financial Risk</h1>
+            <p class="text-center">The right outcomes depends on continuos rigor in governance, models, and processes across the finance function.</p>
+
+            <button>get in touch</button>
+            <button>read more</button>
          </div>
          
       </div>
@@ -64,6 +67,7 @@ export default {
    },
    data(){
       return {
+         counter: 6,
          ContactsHeader,
          MenuHeader
       }
@@ -84,7 +88,7 @@ header {
          margin: 0 10px;
          color: $subtitle;
          &:hover {
-            color: #fff;
+            color: $main;
          }
          
       }
@@ -107,10 +111,14 @@ header {
             color: $subtitle;
             }
          }
-         .fake-btn {
-            padding: 5px 20px;
+         .active {
             background-color: $main-btn;
          }
+      }
+
+      h1 {
+         margin-top: 20%;
+         color: $main;
       }
    }
 }
