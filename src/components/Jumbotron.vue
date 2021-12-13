@@ -66,6 +66,7 @@ export default {
       }
 
       .menu {
+         color: $main;
          text-transform: uppercase;
          li {
             margin: 0 10px;
@@ -100,13 +101,13 @@ export default {
          background-color: $main-btn;
          margin-right: 10px;
       }
-      .gs-btn {
-         color: $main;
-         border: 1px solid $main-btn;
-         &:hover {
-            background-color: $main-btn;
-         }
-      }
+      // .gs-btn {
+      //    color: $main;
+      //    border: 1px solid $main-btn;
+      //    &:hover {
+      //       background-color: $main-btn;
+      //    }
+      // }
    }  
 }
 

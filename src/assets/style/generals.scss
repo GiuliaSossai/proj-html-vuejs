@@ -10,6 +10,7 @@ body {
 }
 
 ul {
+   padding: 0;
    margin: 0;
 }
 
@@ -30,6 +31,15 @@ img {
 button {
    text-transform: uppercase;
    padding: 3px 20px;
+}
+
+.gs-btn {
+   color: $main;
+   border: 1px solid $main-btn;
+   &:hover {
+      color: $main;
+      background-color: $main-btn;
+   }
 }
 
 section {
