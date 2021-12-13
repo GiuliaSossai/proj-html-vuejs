@@ -2,3 +2,8 @@
    background-position: center;
    background-size: cover;
 }
+
+@mixin gs-wrap(){
+   width: 50%;
+   margin: 0 auto;
+}

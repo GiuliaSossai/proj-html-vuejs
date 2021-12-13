@@ -1,6 +1,8 @@
 @import '~bootstrap/scss/bootstrap.scss';
-@import '~@fontsource/didact-gothic/index.css';
-//@import '~@fontsource/didact-gothic/700.css';
+@import '~@fontsource/league-spartan/index.css';
+@import '~@fontsource/league-spartan/800.css';
+@import '~@fontsource/league-spartan/700.css';
+
 
 body {
    font-family: $main-font;
@@ -23,4 +25,45 @@ a {
 
 img {
    width: 100%;
+}
+
+button {
+   text-transform: uppercase;
+   padding: 3px 20px;
+}
+
+section {
+   padding: 60px 0;
+}
+
+h1, h2{
+   font-weight: 800;
+}
+
+h2 {
+   font-size: 40px;
+}
+
+h4, h5 {
+   font-weight: 700;
+}
+
+.subs {
+   text-transform: uppercase;
+   font-size: 13px;
+   font-weight: 700;
+}
+
+.special-title{
+   display: inline-block;
+   color: $main-btn;
+   background-color: $ultra-light;
+   border-radius: 5px;
+}
+
+.special-dark-title{
+   display: inline-block;
+   color: $main;
+   background-color: rgba(8, 109, 84, 0.4);
+   border-radius: 5px;
 }
