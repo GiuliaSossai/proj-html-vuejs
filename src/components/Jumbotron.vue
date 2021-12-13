@@ -16,6 +16,7 @@
                      @click="counter = index"
                   >
                      <a href="#"> {{item.text}} </a>
+                     <!-- <i :class="item.text"></i> -->
                      <i :class="item.icon.join(' ')"></i>
                   </li>
                </ul>   
@@ -66,16 +67,21 @@ export default {
 
       .menu {
          text-transform: uppercase;
+         li {
+            margin: 0 10px;
+            padding: 10px 15px;
+         }
          a {
-            padding: 0 20px;
             color: lighten($subtitle, 20%);
             &:hover {
-            color: $subtitle;
+               color: $subtitle;
             }
          }
          .active {
             background-color: $main-btn;
+            border-radius: 4px;
          }
+         
       }
    }
 
