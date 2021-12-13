@@ -1,0 +1,26 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~@fontsource/didact-gothic/index.css';
+//@import '~@fontsource/didact-gothic/700.css';
+
+body {
+   font-family: $main-font;
+   height: 100%;
+}
+
+ul {
+   margin: 0;
+}
+
+ul li {
+   text-decoration: none;
+   display: block;
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+img {
+   width: 100%;
+}
