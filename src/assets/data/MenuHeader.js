@@ -3,36 +3,43 @@ export default
   {
     text: "home",
     icon: [],
-    active: false
+    active: false,
+    href: "/"
   },
   {
     text: "about",
     icon: [],
-    active: false
+    active: false,
+    href: "/about"
   },
   {
     text: "services",
     icon: [],
-    active: false
+    active: false,
+    href: "/services"
   },
   {
     text: "team",
     icon: [],
-    active: false
+    active: false,
+    href: "/team"
   },
   {
     text: "blog",
     icon: [],
-    active: false
+    active: false,
+    href: "/blog"
   },
   {
    text: "",
    icon: ["far", "fa-user"],
-   active: false
+   active: false,
+   href: "/user"
  },
  {
    text: "get in touch",
    icon: [],
-   active: true
+   active: true,
+   href: "/getintouch"
  }
 ]

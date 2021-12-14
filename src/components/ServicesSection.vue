@@ -4,26 +4,29 @@
          <p class="subs">our business area</p>
          <h2>Excellence in <span class="special-dark-title px-3 pb-2">Services</span></h2>
 
-         <div class="row">
-            <div class="col-11">
-               <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fugit, quisquam voluptate optio labore exercitationem, sequi vero incidunt unde laudantium sapiente excepturi aperiam.</p>
-            </div>
+         <div class="d-flex justify-content-between">
+            <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fugit, quisquam voluptate optio labore exercitationem</p>
+            
             <button class="col-1 btn gs-btn">see all</button>
          </div>
-
-         <div class="row">
-            <div class="col-4 box">
-               ciao
-            </div>
+         
+         <div>
+            <BoxesList />
          </div>
+         
      </div>
      
    </section>
 </template>
 
 <script>
+import BoxesList from './BoxesList.vue';
+
 export default {
-   name: 'ServicesSection'
+   name: 'ServicesSection',
+   components: {
+      BoxesList,
+   }
 }
 </script>
 
@@ -41,12 +44,7 @@ export default {
    .text {
       color: $subtitle;
    }
-   .box {
-      min-height: 100px;
-      background-color: #19191E;
-      color: $subtitle;
-      border-radius: 5px;
-   }
+   
 }
 
 </style>

@@ -15,7 +15,7 @@
                      :class="{active : (index === counter)}"
                      @click="counter = index"
                   >
-                     <a href="#"> {{item.text}} 
+                     <a :href="item.href"> {{item.text}} 
                      <!-- <i :class="item.text"></i> -->
                      <i :class="item.icon.join(' ')"></i></a>
                   </li>
