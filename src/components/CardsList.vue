@@ -5,10 +5,8 @@
          v-for="(item, index) in TeamList"
          :key="index"
       >
-         <!-- <img src="" alt=""> -->
          <div class="member-image me-3 mb-4">
-            <img src="../assets/img/team-1.jpg"/> 
-            <!-- <img :src=" '..assets/img/ + ${{item.image}}' " :alt="item.name"> -->
+            <img :src="require(`../assets/img/${item.image}`)" :alt="item.name">
          </div>
 
          <div class="member-text">

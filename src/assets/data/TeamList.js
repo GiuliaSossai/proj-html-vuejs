@@ -7,13 +7,13 @@ export default
       social: ["fab fa-facebook", "fab fa-linkedin-in", "fab fa-twitter"]
    },
    {
-      image: "team-2.jpg",
+      image: "team-3.jpg",
       name: "Oliver Jones",
       role: "chief procurement",
       social: ["fab fa-facebook", "fab fa-linkedin-in", "fab fa-twitter"]
    },
    {
-      image: "team-3.jpg",
+      image: "team-2.jpg",
       name: "Emma Lopez",
       role: "chief marketing",
       social: ["fab fa-facebook", "fab fa-linkedin-in", "fab fa-twitter"]
