@@ -16,44 +16,11 @@
                <button class="btn gs-btn mt-2">get in touch</button>
             </div>
 
-           <div class="col footer-menu py-4 px-3">
-              <h5>About</h5>
-              <ul>
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-              </ul>
-            </div>
-           <div class="col footer-menu py-4 px-3">
-              <h5>Services</h5>
-              <ul>
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-              </ul>
-           </div>
-           <div class="col footer-menu py-4 px-3">
-              <h5>Support</h5>
-              <ul>
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-                 <li><i class="fas fa-chevron-right"></i><a href=""> aaaa</a></li>  
-              </ul>
-           </div>
+            <AboutMenu :aboutList = "aboutList"/>
+            <ServicesMenu :servicesList = "servicesList"/>
+            <SupportMenu :supportList = "supportList"/>
         </div>
      </div>
-
-
-
 
      <!-- footer-bottom -->
      <div class="footer-bottom">
@@ -66,17 +33,24 @@
 </template>
 
 <script>
+import AboutMenu from './AboutFooter.vue';
+import ServicesMenu from './ServicesFooter.vue';
+import SupportMenu from './SupportFooter.vue';
+
 export default {
    name: 'Footer',
    components: {
-      
+      AboutMenu,
+      ServicesMenu,
+      SupportMenu   
    },
    data(){
       return {
-         
+         aboutList: ['The Company', 'Institutional', 'Social & Events', 'Innovation', 'Environment', 'Technology'],
+         servicesList: ['Audit & Assurance', 'Financial Advisory', 'Analytics M&A', 'Middle Marketing', 'Legal Consulting', 'Regulatory Risk'],
+         supportList: ['Responsability', 'Terms of Use', 'About Cookies', 'Privacy Policy', 'Accessibility', 'Information']
       }
    },
-
 }
 </script>
 
