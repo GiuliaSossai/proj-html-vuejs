@@ -3,12 +3,13 @@
      <div class="footer-top gs-lgt">
         <div class="container row">
            <div class="col contacts-menu">
-               <div class="logo">
+               <div class="logo mb-3">
                  <img src="../assets/img/nexgen-logo.svg" alt="nexgen-logo">
                </div>
                <p>A Functional HTML Template for Corporate & Business.</p>
-               <ul>
-                  <li 
+               <ul class="my-4">
+                  <li
+                     class="my-2"
                      v-for="(contact, index) in ContactsSmall"
                      :key="index"   
                   >
@@ -22,9 +23,9 @@
                <button class="btn gs-btn mt-2">get in touch</button>
             </div>
 
-            <FooterMenu :footerList = "aboutList" class="col footer-menu py-4 px-3"/>
-            <FooterMenu :footerList = "servicesList" class="col footer-menu py-4 px-3"/>
-            <FooterMenu :footerList = "supportList" class="col footer-menu py-4 px-3"/>
+            <FooterMenu :footerList = "aboutList" class="col footer-menu py-4"/>
+            <FooterMenu :footerList = "servicesList" class="col footer-menu py-4"/>
+            <FooterMenu :footerList = "supportList" class="col footer-menu py-4"/>
         </div>
      </div>
 
@@ -53,17 +54,17 @@ export default {
       return {
          ContactsSmall,
 
-         aboutList:{
+         aboutList: {
             name: 'About',
             elements: ['The Company', 'Institutional', 'Social & Events', 'Innovation', 'Environment', 'Technology']
          },
 
-         servicesList:{
+         servicesList: {
             name: 'Services',
             elements: ['Audit & Assurance', 'Financial Advisory', 'Analytics M&A', 'Middle Marketing', 'Legal Consulting', 'Regulatory Risk']
          },
 
-         supportList:{
+         supportList: {
             name: 'Support',
             elements: ['Responsability', 'Terms of Use', 'About Cookies', 'Privacy Policy', 'Accessibility', 'Information']
          }  
@@ -91,11 +92,10 @@ export default {
 
    .row {
       margin: 0 auto;
-      .contacts-menu{
-         //background-color: rgb(97, 93, 93);    
+      .contacts-menu{   
          .logo {
             cursor: pointer;
-            width: 100px;
+            width: 120px;
          }
          .fas {
             font-size: 14px;

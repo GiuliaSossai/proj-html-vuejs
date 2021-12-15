@@ -1,11 +1,12 @@
 <template>
    <div>
       <div v-for="(item, index) in footerList" :key="index">
-         <h5></h5>
+         <h5>{{item}}</h5>
       </div>
          
          <ul>
             <li
+               class="px-4"
                v-for="(item, index) in footerList.elements"
                :key="index"
             >

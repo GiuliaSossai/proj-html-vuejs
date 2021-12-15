@@ -64,17 +64,19 @@ export default {
    }
    textarea {
       resize: none;
+      height: 100px;
    }
 
    .input-inner {
       position: relative;
       i {
          position: absolute;
-         right: 5px;
-         top: 10px;
+         right: 8px;
+         top: 18px;
       }
       input {
          width: 100%;
+         height: 50px;
       }
    }
 

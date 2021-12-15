@@ -28,21 +28,22 @@ export default {
 .content {
    @include gs-wrap;
    .textarea, .form {
-         width: 50%;
-      }
+      width: 50%;
+   }
    .subs {
-         color: $main-btn;
-      }
+      color: $main-btn;
+   }
    h2 {
-         color: $main;
-      }
+      color: $main;
+   }
    p {
-         color: $subtitle;
-      }
+      color: $subtitle;
+   }
    input {
-         width: 100%;
-         background-color: #19191E;
-         border: none;
+      width: 100%;
+      height: 50px;
+      background-color: #232328;
+      border: none;
    }
 }
 
