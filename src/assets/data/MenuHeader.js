@@ -4,42 +4,42 @@ export default
     text: "home",
     icon: [],
     active: false,
-    href: "/"
+    href: "#"
   },
   {
     text: "about",
     icon: [],
     active: false,
-    href: "/about"
+    href: "#"
   },
   {
     text: "services",
     icon: [],
     active: false,
-    href: "/services"
+    href: "#"
   },
   {
     text: "team",
     icon: [],
     active: false,
-    href: "/team"
+    href: "#"
   },
   {
     text: "blog",
     icon: [],
     active: false,
-    href: "/blog"
+    href: "#"
   },
   {
    text: "",
    icon: ["far", "fa-user"],
    active: false,
-   href: "/user"
+   href: "#"
  },
  {
    text: "get in touch",
    icon: [],
    active: true,
-   href: "/getintouch"
+   href: "#"
  }
 ]
