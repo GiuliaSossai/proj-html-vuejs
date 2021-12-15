@@ -24,7 +24,7 @@
 import Editorials from '../assets/data/Editorials';
 
 export default {
-   name: 'Editorial Content',
+   name: 'EditorialContent',
    components: {
       
    },

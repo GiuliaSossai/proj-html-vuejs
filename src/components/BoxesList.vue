@@ -6,7 +6,7 @@
       >
          <i :class="item.icon.join(' ')"></i>
          <h5 class="my-3">{{item.title}}</h5>
-         <p>{{item.sub}}</p>
+         <p class="gs-lgt">{{item.sub}}</p>
 
          <a href=""><i class="fas fa-arrow-right"></i></a>
       </div>

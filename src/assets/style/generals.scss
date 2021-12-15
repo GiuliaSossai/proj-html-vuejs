@@ -3,6 +3,8 @@
 @import '~@fontsource/league-spartan/800.css';
 @import '~@fontsource/league-spartan/700.css';
 
+@import './mixins.scss';
+
 // generals
 body {
    font-family: $main-font;
@@ -51,7 +53,6 @@ p {
    font-size: 20px;
 }
 
-
 // utilities
 .gs-wrap {
    width: 80%;
@@ -60,13 +61,8 @@ p {
    margin: 0 auto;
 }
 
-button {
-   text-transform: uppercase;
-   padding: 3px 20px;
-}
-
 .gs-btn {
-   color: $main;
+   @include gs-btn;
    border: 1px solid $main-btn;
    &:hover {
       color: $main;
@@ -75,9 +71,8 @@ button {
 }
 
 .gs-solid-btn{
-   color: $main;
+   @include gs-btn;
    background-color: $main-btn;
-   margin-right: 10px;
    &:hover {
       color: $main;
    }
@@ -87,6 +82,15 @@ button {
    text-transform: uppercase;
    font-size: 13px;
    font-weight: 700;
+   color: $main-btn;
+}
+
+.gs-lgt {
+   color: lighten($subtitle, 10%);
+}
+
+.gs-grn {
+   color: $main-btn;
 }
 
 .special-title {

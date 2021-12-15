@@ -15,7 +15,6 @@
             <i :class="item.social[0]" class="p-2"></i>
             <i :class="item.social[1]" class="mx-2 p-2"></i>
             <i :class="item.social[2]" class="p-2"></i>
-            <!-- <i :class="item.social.join(' ')"></i> -->
          </div>
          
       </div>

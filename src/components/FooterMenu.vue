@@ -10,7 +10,7 @@
                :key="index"
             >
                <i class="fas fa-chevron-right"></i>
-               <a href=""> {{item}} </a>
+               <a href="#" class="gs-lgt"> {{item}} </a>
             </li>  
          </ul>
       

@@ -1,9 +1,5 @@
 <template>
-  <section class="gs-wrap">
-      <div class="contents text-center">
-         <p class="subs">introduction video</p>
-         <h2>Advisory <span class="special-title px-3 pb-2">Performance</span></h2>
-         <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fugit, quisquam voluptate optio labore exercitationem, sequi vero incidunt unde laudantium sapiente excepturi aperiam.</p>
+ 
 
          <div class="cover">
             <img src="../assets/img/video-1.jpg" alt="video">
@@ -14,8 +10,7 @@
             </div>
          </div>
 
-      </div>   
-   </section>
+     
 </template>
 
 <script>
@@ -27,27 +22,15 @@ export default {
 <style lang="scss">
 @import '../assets/style/vars.scss';
 @import '../assets/style/generals.scss';
-@import '../assets/style/mixins.scss';
 
 .contents {
-   @include gs-wrap;
-   .subs {
-      color: $main-btn;
-   }
-   
-   .text{
-      color: $subtitle;
-   }
-
    .cover {
    position: relative;
    width: 100%;
-   }
-
-   .cover img {
-   width: 100%;
-   display: block;
-   }
+   img {
+      display: block;
+      }
+   } 
 
    .layover {
    position: absolute;
@@ -70,6 +53,7 @@ export default {
       cursor: pointer;
       }
    }
+
    .fa-play:last-child{
       color: $main-btn;
       opacity: 30%;
@@ -84,5 +68,4 @@ export default {
    display: block;
    }
 }
-
 </style>

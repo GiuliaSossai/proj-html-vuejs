@@ -1,34 +1,66 @@
 <template>
   <main>
      <!-- 01 video -->
-     <VideoSection />
+     <section class="gs-wrap">
+         <div class="contents text-center">
+            <p class="subs">introduction video</p>
+            <h2>Advisory <span class="special-title px-3 pb-2">Performance</span></h2>
+            <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fugit, quisquam voluptate optio labore exercitationem, sequi vero incidunt unde laudantium sapiente excepturi aperiam.</p>
+
+            <Video />
+         </div>   
+      </section>
+     
 
      <!-- 02 numbers -->
-     <ResultsSection />
+     <section class="results-bg">
+         <div class="contents text-center">
+            <p class="subs">what are we doing</p>
+            <h2><span class="special-dark-title px-3 pb-2">Results</span> in Numbers</h2>
+         </div>
+
+         <div class="gs-wrap row text-center">
+            <div class="col"
+               v-for="(item, index) in Results"
+               :key="index"
+            >
+               <h4 class="gs-grn">{{item.quantity}}</h4>
+               <h5>{{item.text}}</h5>
+            </div>
+         </div>
+      </section>
 
      <!-- 03 services -->
-     <ServicesSection />
+     <section class="services-section">
+         <div class="gs-wrap">
+            <p class="subs">our business area</p>
+            <h2>Excellence in <span class="special-dark-title px-3 pb-2">Services</span></h2>
+
+            <div class="d-flex justify-content-between align-items-center">
+               <p class="gs-lgt text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fugit, quisquam voluptate optio labore exercitationem</p>
+                  
+               <button class="btn gs-btn">see all</button>
+            </div>
+               
+            <div>
+               <BoxesList />
+            </div>     
+         </div>  
+      </section>
 
      <!-- 04 team -->
      <section>
         <div class="gs-wrap d-flex justify-content-between">
-           <div class="textarea">
+            <div class="textarea">
                <p class="subs">we like what we do</p>
                <h2><span class="special-title px-3 pb-2">Team</span> of Experts</h2>
                <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fugit, quisquam voluptate optio labore exercitationem, sequi vero incidunt unde laudantium sapiente excepturi aperiam.</p>
                <div>
                   <CardsList />
                </div>     
-           </div>
+            </div>
 
-           <div class="extract px-4 py-5 mt-4">
-              <h5>President Speech</h5>
-              <i class="fas fa-quote-right"></i>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-              <p class="my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque consequuntur, praesentium hic enim voluptates quod id magni? </p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
-              <p class="my-2">T. Jhonson</p>
-           </div>
+            <Quote />
         </div>
         
       </section>
@@ -54,7 +86,7 @@
         </div>  
      </section>
 
-     <!-- 07 form2 -->
+     <!-- 07 form -->
      <section>
         <div class="gs-wrap d-flex justify-content-between align-items-center">
            <Form />
@@ -68,13 +100,13 @@
                      v-for="(contact, index) in ContactsSmall"
                      :key="index"   
                   >
-                     <a href="#">
+                     <a href="#" class="gs-grn">
                         <i :class="contact.icon.join(' ')" class="p-2"></i>
                         {{contact.text}} 
                      </a>   
                   </li>
                </ul>
-               <button class="btn gs-btn p-2 mt-3">view map</button>
+               <button class="btn gs-btn mt-3 gs-grn">view map</button>
            </div>
         </div>
      </section>
@@ -82,40 +114,33 @@
 </template>
 
 <script>
-// sezioni importate
-import VideoSection from './VideoSection.vue';
-import ResultsSection from './ResultsSection.vue';
-import ServicesSection from './ServicesSection.vue';
+import Video from './Video.vue'; //componente 01
+import BoxesList from './BoxesList.vue'; //componente 03
+import CardsList from './CardsList.vue'; // componente 04
+import Quote from './Quote.vue'; // componente 04
+import EditorialContent from './EditorialContent.vue'; // componente 05
+import NewsLetter from './NewsLetter.vue'; // componente 06
+import Form from './Form.vue'; // componente 07
 
-// componenti delle sezioni 4-5
-import CardsList from './CardsList.vue';
-import EditorialContent from './EditorialContent.vue';
-
-//componenti form sezioni 06-07
-import NewsLetter from './NewsLetter.vue';
-import Form from './Form.vue';
-
-//per sezione form2 e footer prima colonna
+//database js
+import Results from "../assets/data/Results.js";
 import ContactsSmall from "../assets/data/ContactsSmall.js";
 
 export default {
    name: 'Main',
    components: {
-      VideoSection,
-      ResultsSection,
-      ServicesSection,
-
+      Video,
+      BoxesList,
       CardsList,
+      Quote,
       EditorialContent,
-
       NewsLetter,
-      Form,
-      
-
+      Form
    },
    data(){
       return {
-         ContactsSmall,
+         Results,
+         ContactsSmall
       }
    },
 }
@@ -126,46 +151,53 @@ export default {
 @import '../assets/style/generals.scss';
 @import '../assets/style/mixins.scss';
 
-// 04 team
-.textarea {
-   width: 60%;
-   .subs {
-      color: $main-btn;
-   }
-   .text {
+//01 video
+.contents {
+   @include gs-wrap;
+   .text{
       color: $subtitle;
    }
 }
 
-.extract {
-   width: 30%;
-   min-height: 300px;
-   background-color: $main-btn;
-   border-radius: 5px;
-   color: $light-green;
-   position: relative;
-   h5 {
+//02 numbers
+.results-bg {
+   background-image: url('../assets/img/bg-1.jpg');
+   @include bg-position;
+   h2, h5{
       color: $main;
-      font-size: 24px;
    }
-   p:last-child {
-      font-weight: 700;
-      padding-top: 30px;
+   .row {
+      margin: 30px auto;
+      h4 {
+         font-size: 32px;
+      }
+      h5 {
+         font-size: 25px;
+      } 
+   }  
+}
+
+//03 services
+.services-section {
+   background-color: $darkest-bg;
+   color: $main;
+   .text {
+      width: 70%;
    }
-   .fas {
-      position: absolute;
-      bottom: 65px;
-      right: 20px;
-      color: darken($main-btn , 10%);
+}
+
+
+// 04 team
+.textarea {
+   width: 60%;
+   .text {
+      color: $subtitle;
    }
 }
 
 // 05 news
 .news {
    background-color: $light-green;
-   .subs {
-      color: $main-btn;
-   }
    .special-title {
       background-color: darken($ultra-light, 16%);
    }
@@ -193,9 +225,6 @@ export default {
      border-radius: 50%;
      background-color: $light-green;
      margin: 8px;
-   }
-   a, .gs-btn {
-      color: $main-btn;
    }
 }
 

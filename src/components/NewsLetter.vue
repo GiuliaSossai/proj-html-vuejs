@@ -3,7 +3,7 @@
            <div class="textarea">
                <p class="subs">newsletter</p>
                <h2><span class="special-dark-title px-3 pb-2">Know</span> first</h2>
-               <p>Follow closely and receive content about our company and the news of the current market</p>
+               <p class="gs-lgt">Follow closely and receive content about our company and the news of the current market</p>
            </div>
            
            <div class="form">

@@ -23,9 +23,9 @@
 
             <div class="menu-bottom">
                <h1 class="text-center">Financial Risk</h1>
-               <p class="text-center">The right outcomes depends on continuos rigor in governance, models, and processes across the finance function.</p>
+               <p class="text-center gs-lgt">The right outcomes depends on continuos rigor in governance, models, and processes across the finance function.</p>
                <div class="text-center pt-4">
-                  <button class="btn gs-solid-btn">get in touch</button>
+                  <button class="btn gs-solid-btn me-3">get in touch</button>
                   <button class="btn gs-btn">read more</button>
                </div>   
             </div>
@@ -73,6 +73,7 @@ export default {
          }
          a {
             color: lighten($subtitle, 20%);
+            font-size: 20px;
             &:hover {
                color: $subtitle;
             }
@@ -93,9 +94,8 @@ export default {
          color: $main;
       }
       p{
-         font-size: 20px;
+         font-size: 24px;
       }
    }  
 }
-
 </style>

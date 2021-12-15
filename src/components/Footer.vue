@@ -1,18 +1,18 @@
 <template>
   <footer>
-     <div class="footer-top">
+     <div class="footer-top gs-lgt">
         <div class="container row">
            <div class="col contacts-menu">
                <div class="logo">
                  <img src="../assets/img/nexgen-logo.svg" alt="nexgen-logo">
                </div>
-               <p>A Functoinal HTML Template for Corporate & Business.</p>
+               <p>A Functional HTML Template for Corporate & Business.</p>
                <ul>
                   <li 
                      v-for="(contact, index) in ContactsSmall"
                      :key="index"   
                   >
-                     <a href="#">
+                     <a href="#" class="gs-lgt">
                         <i :class="contact.icon.join(' ')"></i>
                         {{contact.text}} 
                      </a>   
@@ -29,7 +29,7 @@
      </div>
 
      <!-- footer-bottom -->
-     <div class="footer-bottom">
+     <div class="footer-bottom gs-lgt">
         <div class="container d-flex justify-content-between align-items-center py-4">
             <p>Enjoy the low price. We are tracking any intention of piracy</p> 
             <p>&copy; 2020 NEXGEN is proudly powered by <span>Codings</span>.</p>
@@ -82,9 +82,8 @@ export default {
    min-height: 300px;
    @include bg-position;
    padding: 80px 0;
-   color: $subtitle;
    a {   
-      color: $subtitle;
+      
       &:hover {
          color: $main;
       }
@@ -117,7 +116,6 @@ export default {
 }
 
 .footer-bottom{
-   color: $subtitle;
    background-color: $dark-bg;
    p {
       margin: 0;

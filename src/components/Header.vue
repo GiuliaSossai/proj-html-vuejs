@@ -24,5 +24,4 @@ export default {
 header {
    color: $subtitle;
 }
-
 </style>
