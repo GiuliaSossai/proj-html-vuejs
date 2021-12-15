@@ -8,17 +8,23 @@
                </div>
                <p>A Functoinal HTML Template for Corporate & Business.</p>
                <ul>
-                  <li><a href="#"> <i class="fas fa-phone"></i> +1 (035) 1234-5678</a></li>
-                  <li><a href="#"> <i class="fas fa-envelope"></i> hello@example.com</a></li>
-                  <li><a href="#"> <i class="fas fa-map-marker-alt"></i> Main Avenue, 987</a></li>
+                  <li 
+                     v-for="(contact, index) in ContactsSmall"
+                     :key="index"   
+                  >
+                     <a href="#">
+                        <i :class="contact.icon.join(' ')"></i>
+                        {{contact.text}} 
+                     </a>   
+                  </li>
                </ul>
 
                <button class="btn gs-btn mt-2">get in touch</button>
             </div>
 
-            <AboutMenu :aboutList = "aboutList"/>
-            <ServicesMenu :servicesList = "servicesList"/>
-            <SupportMenu :supportList = "supportList"/>
+            <FooterMenu :footerList = "aboutList" class="col footer-menu py-4 px-3"/>
+            <FooterMenu :footerList = "servicesList" class="col footer-menu py-4 px-3"/>
+            <FooterMenu :footerList = "supportList" class="col footer-menu py-4 px-3"/>
         </div>
      </div>
 
@@ -33,24 +39,36 @@
 </template>
 
 <script>
-import AboutMenu from './AboutFooter.vue';
-import ServicesMenu from './ServicesFooter.vue';
-import SupportMenu from './SupportFooter.vue';
+import FooterMenu from './FooterMenu.vue';
+
+import ContactsSmall from "../assets/data/ContactsSmall.js";
 
 export default {
    name: 'Footer',
    components: {
-      AboutMenu,
-      ServicesMenu,
-      SupportMenu   
+      FooterMenu,   
    },
+
    data(){
       return {
-         aboutList: ['The Company', 'Institutional', 'Social & Events', 'Innovation', 'Environment', 'Technology'],
-         servicesList: ['Audit & Assurance', 'Financial Advisory', 'Analytics M&A', 'Middle Marketing', 'Legal Consulting', 'Regulatory Risk'],
-         supportList: ['Responsability', 'Terms of Use', 'About Cookies', 'Privacy Policy', 'Accessibility', 'Information']
+         ContactsSmall,
+
+         aboutList:{
+            name: 'About',
+            elements: ['The Company', 'Institutional', 'Social & Events', 'Innovation', 'Environment', 'Technology']
+         },
+
+         servicesList:{
+            name: 'Services',
+            elements: ['Audit & Assurance', 'Financial Advisory', 'Analytics M&A', 'Middle Marketing', 'Legal Consulting', 'Regulatory Risk']
+         },
+
+         supportList:{
+            name: 'Support',
+            elements: ['Responsability', 'Terms of Use', 'About Cookies', 'Privacy Policy', 'Accessibility', 'Information']
+         }  
       }
-   },
+   }
 }
 </script>
 

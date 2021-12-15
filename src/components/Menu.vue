@@ -1,7 +1,7 @@
 <template>
-  <div class="jumbotron">
-         <div class="container">
-            <div class="d-flex justify-content-between align-items-center pt-3 jumbo-top">
+  <div class="menu-content">
+         <div class="gs-wrap">
+            <div class="d-flex justify-content-between align-items-center pt-3 menu-top">
                <div class="logo">
                   <a href="#"><img src="../assets/img/nexgen-logo.svg" alt="nexgen-logo"></a>
                </div>
@@ -16,13 +16,12 @@
                      @click="counter = index"
                   >
                      <a :href="item.href"> {{item.text}} 
-                     <!-- <i :class="item.text"></i> -->
                      <i :class="item.icon.join(' ')"></i></a>
                   </li>
                </ul>   
             </div>
 
-            <div class="jumbo-bottom">
+            <div class="menu-bottom">
                <h1 class="text-center">Financial Risk</h1>
                <p class="text-center">The right outcomes depends on continuos rigor in governance, models, and processes across the finance function.</p>
                <div class="text-center pt-4">
@@ -39,7 +38,7 @@
 import MenuHeader from "../assets/data/MenuHeader.js";
 
 export default {
-   name: 'Jumbotron',
+   name: 'Menu',
    data(){
       return {
          counter: 6,
@@ -55,11 +54,11 @@ export default {
 @import '../assets/style/generals.scss';
 @import '../assets/style/mixins.scss';
 
-.jumbotron {
-   height: 600px;
+.menu-content {
+   height: 800px;
    background-image: url('../assets/img/bg-2.jpg');
    @include bg-position;
-   .jumbo-top {
+   .menu-top {
       margin-bottom: 10%;
       .logo {
          width: 120px;
@@ -86,10 +85,10 @@ export default {
       }
    }
 
-   .jumbo-bottom{
+   .menu-bottom{
       @include gs-wrap;
       h1 {
-         font-size: 60px;
+         margin-top: 35%;
          margin-bottom: 20px;
          color: $main;
       }

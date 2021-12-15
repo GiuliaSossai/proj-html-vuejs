@@ -11,7 +11,7 @@
 
      <!-- 04 team -->
      <section>
-        <div class="container d-flex justify-content-between">
+        <div class="gs-wrap d-flex justify-content-between">
            <div class="textarea">
                <p class="subs">we like what we do</p>
                <h2><span class="special-title px-3 pb-2">Team</span> of Experts</h2>
@@ -21,7 +21,7 @@
                </div>     
            </div>
 
-           <div class="extract p-3 mt-4">
+           <div class="extract px-4 py-5 mt-4">
               <h5>President Speech</h5>
               <i class="fas fa-quote-right"></i>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
@@ -35,7 +35,7 @@
 
      <!-- 05 news -->
      <section class="news">
-         <div class="container">
+         <div class="gs-wrap">
             <p class="subs">our editorial content</p>
             <h2>Latest <span class="special-title px-3 pb-2">News</span></h2>
             <div class="d-flex justify-content-between align-items-center">
@@ -47,64 +47,32 @@
          </div>
       </section>
 
-     <!-- 06 form1 -->
+     <!-- 06 newsletter -->
      <section class="know-form">
-        <div class="content d-flex justify-content-between align-items-center">
-           <div class="textarea">
-               <p class="subs">newsletter</p>
-               <h2><span class="special-dark-title px-3 pb-2">Know</span> first</h2>
-               <p>Follow closely and receive content about our company and the news of the current market</p>
-           </div>
-           
-           <div class="form">
-              <input type="text" class="form-control d-block" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1">
-              <input type="text" class="form-control d-block my-3" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
-              <button class="btn gs-solid-btn">subscribe</button>
-           </div>
-        </div>
+        <div class="gs-wrap">
+           <NewsLetter />
+        </div>  
      </section>
 
      <!-- 07 form2 -->
      <section>
-        <div class="container d-flex justify-content-between align-items-center">
-           <div class="form pe-5">
-               <p class="subs">send a message</p>
-               <h2>Get in <span class="special-title px-3 pb-2">Touch</span></h2>
-               <p>We will respond to your message as soon as possible</p>
-
-                  <div class="d-flex justify-content-between">
-                     <!-- input con favicon -->
-                     <div class="input-inner">
-                        <i class="fas fa-print"></i>
-                        <input type="text" class="form-control gs-form mb-3 gs-input" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">
-                     </div>
-                     
-                     <input type="text" class="form-control gs-form mb-3" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
-                  </div>
-                  <div class="d-flex justify-content-between">
-                     <input type="text" class="form-control gs-form mb-3" placeholder="Phone" aria-label="Phone" aria-describedby="basic-addon1">
-
-                     <select name="" id="selectioninfo" class="gs-form mb-3 px-2">
-                        <option value="">More Info</option>
-                        <option value="">Job Oportunities</option>
-                        <option value="">Consultant Request</option>
-                     </select>
-
-                  </div>
-                  <textarea class="form-control mb-3"  placeholder="Message" aria-label="Message"></textarea>
-
-                  <button class="btn gs-solid-btn">send</button>
-               
-           </div>
+        <div class="gs-wrap d-flex justify-content-between align-items-center">
+           <Form />
 
            <div class="contacts">
               <h4>Example Inc.</h4>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               <p>Culpa adipisci esse voluptatem quo corporis, vel suscipit dolor distinctio! Quibusdam, accusamus dolores ratione </p>
               <ul>
-                  <li><a href="#"> <i class="fas fa-phone p-2"></i> +1 (035) 1234-5678</a></li>
-                  <li><a href="#"> <i class="fas fa-envelope p-2"></i> hello@example.com</a></li>
-                  <li><a href="#"> <i class="fas fa-map-marker-alt p-2"></i> Main Avenue, 987</a></li>
+                  <li 
+                     v-for="(contact, index) in ContactsSmall"
+                     :key="index"   
+                  >
+                     <a href="#">
+                        <i :class="contact.icon.join(' ')" class="p-2"></i>
+                        {{contact.text}} 
+                     </a>   
+                  </li>
                </ul>
                <button class="btn gs-btn p-2 mt-3">view map</button>
            </div>
@@ -123,6 +91,13 @@ import ServicesSection from './ServicesSection.vue';
 import CardsList from './CardsList.vue';
 import EditorialContent from './EditorialContent.vue';
 
+//componenti form sezioni 06-07
+import NewsLetter from './NewsLetter.vue';
+import Form from './Form.vue';
+
+//per sezione form2 e footer prima colonna
+import ContactsSmall from "../assets/data/ContactsSmall.js";
+
 export default {
    name: 'Main',
    components: {
@@ -133,10 +108,14 @@ export default {
       CardsList,
       EditorialContent,
 
+      NewsLetter,
+      Form,
+      
+
    },
    data(){
       return {
-         
+         ContactsSmall,
       }
    },
 }
@@ -158,23 +137,24 @@ export default {
    }
 }
 
-
 .extract {
-   width: 250px;
+   width: 30%;
    min-height: 300px;
    background-color: $main-btn;
    border-radius: 5px;
-   color: $subtitle;
+   color: $light-green;
    position: relative;
    h5 {
       color: $main;
+      font-size: 24px;
    }
    p:last-child {
       font-weight: 700;
+      padding-top: 30px;
    }
    .fas {
       position: absolute;
-      bottom: 30px;
+      bottom: 65px;
       right: 20px;
       color: darken($main-btn , 10%);
    }
@@ -182,7 +162,7 @@ export default {
 
 // 05 news
 .news {
-   background-color:$light-green;
+   background-color: $light-green;
    .subs {
       color: $main-btn;
    }
@@ -195,69 +175,12 @@ export default {
    }
 }
 
-// 06 know
+// 06 - newsletter
 .know-form {
    background-color: $darkest-bg;
-   .content {
-      @include gs-wrap;
-      .textarea, .form {
-         width: 50%;
-      }
-      .subs {
-         color: $main-btn;
-      }
-      h2 {
-         color: $main;
-      }
-      p {
-         color: $subtitle;
-      }
-      input {
-         width: 100%;
-         background-color: #19191E;
-         border: none;
-      }
-   }  
 }
 
-// 07 - form2
-.form {
-   width: 70%;
-   p {
-      color: $subtitle;
-   }
-   .subs {
-      color: $main-btn;
-   }
-   .gs-form, .input-inner {
-     width: 48%;
-   }
-   select, i {
-      color: #6C757D;
-   }
-
-   textarea, .gs-form {
-      border-radius: 2px;
-      border: none;
-      background-color: #ECECEC;
-   }
-   textarea {
-      resize: none;
-   }
-
-   .input-inner {
-      position: relative;
-      i {
-         position: absolute;
-         right: 5px;
-         top: 10px;
-      }
-      input {
-         width: 100%;
-      }
-   }
-
-}
+// 07 - form
 .contacts {
    width: 30%;
    p {

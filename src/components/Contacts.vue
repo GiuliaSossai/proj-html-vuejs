@@ -1,6 +1,6 @@
 <template>
   <div class="header-top">
-        <div class="container d-flex justify-content-between align-items-center py-2">
+        <div class="gs-wrap d-flex justify-content-between align-items-center py-2">
             <div>
                <i class="fas fa-clock"></i>
                Open Hours: Mon - Sat - 9:00 - 18:00

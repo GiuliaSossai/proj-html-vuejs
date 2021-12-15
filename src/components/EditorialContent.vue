@@ -70,12 +70,14 @@ export default {
          display: none;
       }
       h5 {
-         margin-top: 200px;
+         margin-top: 50%;
       }
       &:hover p{
          display: block;
       }
-      
+      &:hover h5{
+         margin-top: 30%;
+      }
    }
 
 

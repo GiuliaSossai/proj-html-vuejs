@@ -49,15 +49,17 @@ export default {
    width: 50%;
    .member-image {
       float: left;
-      width: 90px;
-      background-color: pink;
+      width: 110px;
       border-radius: 3px;
       overflow: hidden;
    }
    .member-text {
+      h5 {
+         font-size: 22px;
+      }
       p {
          color: $subtitle;
-         font-size: 14px;
+         font-size: 18px;
       }
       i {
          color: $main-btn;

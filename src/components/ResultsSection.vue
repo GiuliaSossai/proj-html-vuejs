@@ -5,7 +5,7 @@
             <h2><span class="special-dark-title px-3 pb-2">Results</span> in Numbers</h2>
          </div>
 
-         <div class="container row text-center">
+         <div class="gs-wrap row text-center">
             <div class="col"
                v-for="(item, index) in Results"
                :key="index"

@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="gs-wrap">
       <div class="contents text-center">
          <p class="subs">introduction video</p>
          <h2>Advisory <span class="special-title px-3 pb-2">Performance</span></h2>

@@ -1,19 +1,19 @@
 <template>
   <header>
       <Contacts />
-      <Jumbotron />  
+      <Menu />  
   </header>
 </template>
 
 <script>
 import Contacts from './Contacts.vue';
-import Jumbotron from './Jumbotron.vue';
+import Menu from './Menu.vue';
 
 export default {
    name: 'Header',
    components: {
       Contacts,
-      Jumbotron
+      Menu,
    }
 }
 </script>

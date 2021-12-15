@@ -1,6 +1,6 @@
 <template>
   <section class="services-section">
-     <div class="container">
+     <div class="gs-wrap">
          <p class="subs">our business area</p>
          <h2>Excellence in <span class="special-dark-title px-3 pb-2">Services</span></h2>
 
