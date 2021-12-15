@@ -1,6 +1,6 @@
 <template>
-  <div>
-      <div class="box p-4"
+  <div class="d-flex align-items-center justify-content-between flex-wrap">
+      <div class="box p-5 mt-4"
          v-for="(item, index) in ServicesList"
          :key="index"
       >
@@ -36,12 +36,11 @@ export default {
 @import '../assets/style/mixins.scss';
 
 .box {
-   display: inline-block;
    width: 30%;
-   margin: 1.5%;
+   flex-shrink: 0;
    background-color: #19191E;
    color: $subtitle;
-   border-radius: 5px;
+   border-radius: 8px;
    position: relative;
    i {
       font-size: 30px;
@@ -53,8 +52,8 @@ export default {
 
    .fa-arrow-right {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 40px;
+      right: 40px;
       font-size: 16px;
    }
 }

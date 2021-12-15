@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex align-items-center justify-content-between mt-4">
-     <div class="ed-box text-center cover"
+     <div class="ed-box text-center cover mt-3"
       v-for="(item, index) in Editorials"
       :key="index"
      >
@@ -43,16 +43,11 @@ export default {
 
 .ed-box {
    width: 30%;
-   border-radius: 5px;
+   border-radius: 8px;
    overflow: hidden;
    min-height: 100px;
    position: relative;
-   .mid {
-      margin: 0 5%;
-   }
-
-   .cover img {
-      width: 100%;
+   img {
       display: block;
    }
    &:hover img {

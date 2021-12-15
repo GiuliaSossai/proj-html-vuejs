@@ -5,7 +5,7 @@
          <div class="contents text-center">
             <p class="subs">introduction video</p>
             <h2>Advisory <span class="special-title px-3 pb-2">Performance</span></h2>
-            <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fugit, quisquam voluptate optio labore exercitationem, sequi vero incidunt unde laudantium sapiente excepturi aperiam.</p>
+            <p class="text mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fugit, quisquam voluptate optio labore exercitationem, sequi vero incidunt unde laudantium sapiente excepturi aperiam.</p>
 
             <Video />
          </div>   
@@ -42,9 +42,7 @@
                <button class="btn gs-btn">see all</button>
             </div>
                
-            <div>
-               <BoxesList />
-            </div>     
+            <BoxesList />   
          </div>  
       </section>
 
