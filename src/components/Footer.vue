@@ -1,7 +1,7 @@
 <template>
   <footer>
      <div class="footer-top gs-lgt">
-        <div class="container row">
+        <div class="gs-wrap row">
            <div class="col contacts-menu">
                <div class="logo mb-3">
                  <img src="../assets/img/nexgen-logo.svg" alt="nexgen-logo">
@@ -31,7 +31,7 @@
 
      <!-- footer-bottom -->
      <div class="footer-bottom gs-lgt">
-        <div class="container d-flex justify-content-between align-items-center py-4">
+        <div class="gs-wrap d-flex justify-content-between align-items-center py-4">
             <p>Enjoy the low price. We are tracking any intention of piracy</p> 
             <p>&copy; 2020 NEXGEN is proudly powered by <span>Codings</span>.</p>
          </div>
@@ -55,16 +55,19 @@ export default {
          ContactsSmall,
 
          aboutList: {
+            id: "1",
             name: 'About',
             elements: ['The Company', 'Institutional', 'Social & Events', 'Innovation', 'Environment', 'Technology']
          },
 
          servicesList: {
+            id: "2",
             name: 'Services',
             elements: ['Audit & Assurance', 'Financial Advisory', 'Analytics M&A', 'Middle Marketing', 'Legal Consulting', 'Regulatory Risk']
          },
 
          supportList: {
+            id: "3",
             name: 'Support',
             elements: ['Responsability', 'Terms of Use', 'About Cookies', 'Privacy Policy', 'Accessibility', 'Information']
          }  

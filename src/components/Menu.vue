@@ -1,37 +1,44 @@
 <template>
   <div class="menu-content">
-         <div class="gs-wrap">
-            <div class="d-flex justify-content-between align-items-center pt-3 menu-top">
-               <div class="logo">
-                  <a href="#"><img src="../assets/img/nexgen-logo.svg" alt="nexgen-logo"></a>
-               </div>
-               
-               <ul class="menu d-flex">
-                  <!-- ciclo for per stampare la lista -->
-                  <!-- se la voce del menu è attiva, assume la classe active -->
-                  <li
-                     v-for="(item, index) in MenuHeader"
-                     :key="index"
-                     :class="{active : (index === counter)}"
-                     @click="counter = index"
-                  >
-                     <a :href="item.href"> {{item.text}} 
-                     <i :class="item.icon.join(' ')"></i></a>
-                  </li>
-               </ul>   
-            </div>
+     <div class="pages">
+        <div class="page"></div>
+        <div class="page my-3 page-bg"></div>
+        <div class="page"></div>
+     </div>
 
-            <div class="menu-bottom">
-               <h1 class="text-center">Financial Risk</h1>
-               <p class="text-center gs-lgt">The right outcomes depends on continuos rigor in governance, models, and processes across the finance function.</p>
-               <div class="text-center pt-4">
-                  <button class="btn gs-solid-btn me-3">get in touch</button>
-                  <button class="btn gs-btn">read more</button>
-               </div>   
+
+      <div class="gs-wrap">
+         <div class="d-flex justify-content-between align-items-center pt-3 menu-top">
+            <div class="logo">
+               <a href="#"><img src="../assets/img/nexgen-logo.svg" alt="nexgen-logo"></a>
             </div>
+               
+            <ul class="menu d-flex">
+               <!-- ciclo for per stampare la lista -->
+               <!-- se la voce del menu è attiva, assume la classe active -->
+               <li
+                  v-for="(item, index) in MenuHeader"
+                  :key="index"
+                  :class="{active : (index === counter)}"
+                  @click="counter = index"
+               >
+                  <a :href="item.href"> {{item.text}} 
+                  <i :class="item.icon.join(' ')"></i></a>
+               </li>
+            </ul>   
+         </div>
+
+         <div class="menu-bottom">
+            <h1 class="text-center">Financial Risk</h1>
+            <p class="text-center gs-lgt">The right outcomes depends on continuos rigor in governance, models, and processes across the finance function.</p>
+            <div class="text-center pt-4">
+               <button class="btn gs-solid-btn me-3">get in touch</button>
+               <button class="btn gs-btn">read more</button>
+            </div>   
+         </div>
             
-         </div>  
-      </div>
+      </div>  
+   </div>
 </template>
 
 <script>
@@ -58,6 +65,22 @@ export default {
    height: 800px;
    background-image: url('../assets/img/bg-2.jpg');
    @include bg-position;
+   position: relative;
+   .pages {
+      position: absolute;
+      right: 16px;
+      top: 40%;
+      .page {
+         width: 10px;
+         height: 30px;
+         border: 2px solid $main-btn;
+         border-radius: 8px;  
+      }
+      .page-bg {
+         background-color: $main-btn;
+      }
+   }
+
    .menu-top {
       margin-bottom: 10%;
       .logo {
@@ -81,8 +104,7 @@ export default {
          .active {
             background-color: $main-btn;
             border-radius: 4px;
-         }
-         
+         }  
       }
    }
 
