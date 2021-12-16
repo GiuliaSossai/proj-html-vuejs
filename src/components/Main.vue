@@ -138,9 +138,31 @@ export default {
    data(){
       return {
          Results,
-         ContactsSmall
+         ContactsSmall,
+         //counter: 0
       }
    },
+   methods: {
+      //funzione per visualizzare un'animazione dei numeri nella sezione 02 al mounted della pagina
+      getResults(){
+         let counter = 0;
+         console.log(counter);
+         console.log(this.Results[0].quantity);
+         
+         // const clock = setInterval(function(){
+         //    counter++;
+         //    console.log('incremento counter', counter++);
+         //    if(counter == 10){
+         //       clearTimeout(clock);
+         //       this.Results[0].quantity = 10;
+         //    }
+         // },100)
+      }
+   },
+   mounted(){
+      this.getResults();
+   }
+
 }
 </script>
 

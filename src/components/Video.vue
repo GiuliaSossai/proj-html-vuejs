@@ -1,16 +1,12 @@
 <template>
- 
+   <div class="cover">
+      <img src="../assets/img/video-1.jpg" alt="video">
 
-         <div class="cover">
-            <img src="../assets/img/video-1.jpg" alt="video">
-
-            <div class="layover">
-               <i class="fas fa-play"></i>
-               <i class="fas fa-play"></i>
-            </div>
-         </div>
-
-     
+      <div class="layover">
+         <i class="fas fa-play"></i>
+         <i class="fas fa-play"></i>
+      </div>
+   </div>    
 </template>
 
 <script>
